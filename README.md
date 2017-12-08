@@ -19,7 +19,7 @@
  */
 - (id)kr_safeObjectAtIndex:(NSUInteger)index {
     if (self.count == 0 || index > self.count - 1) {
-#ifndef DEBUG
+#ifdef DEBUG
         NSAssert3(false, @"%@ 数组大小:%tu, 游标%tu越界!", NSStringFromSelector(_cmd), self.count, index);
 #else
     NSLog(@"%@ 数组大小:%tu, 游标%tu越界!", NSStringFromSelector(_cmd), self.count, index);
