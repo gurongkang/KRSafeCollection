@@ -12,7 +12,7 @@
 
 - (id)kr_safeObjectAtIndex:(NSUInteger)index {
     if (self.count == 0 || index > self.count - 1) {
-#ifndef DEBUG
+#ifdef DEBUG
         NSAssert3(false, @"%@ 数组大小:%tu, 游标%tu越界!", NSStringFromSelector(_cmd), self.count, index);
 #else
     NSLog(@"%@ 数组大小:%tu, 游标%tu越界!", NSStringFromSelector(_cmd), self.count, index);
@@ -28,7 +28,7 @@
 
 - (void)kr_safeAddObject:(id)object {
     if (object == nil) {
-#ifndef DEBUG
+#ifdef DEBUG
         NSAssert1(false, @"%@ 添加对象为nil!", NSStringFromSelector(_cmd));
 #else
         NSLog(@"%@ 添加对象为nil!", NSStringFromSelector(_cmd));
@@ -40,7 +40,7 @@
 
 - (void)kr_safeAddObjectFromArray:(NSArray *)array {
     if (array == nil) {
-#ifndef DEBUG
+#ifdef DEBUG
         NSAssert1(false, @"%@ 增加数组为空数组!", NSStringFromSelector(_cmd));
 #else
         NSLog(@"%@ 增加数组为空数组!", NSStringFromSelector(_cmd));
@@ -52,7 +52,7 @@
 
 - (void)kr_safeRemoveObjectAtIndex:(NSUInteger)index {
     if (self.count == 0 || self.count > index - 1) {
-#ifndef DEBUG
+#ifdef DEBUG
         NSAssert3(false, @"%@ 数组大小:%tu, 游标%tu越界！", NSStringFromSelector(_cmd), self.count, index);
 #else
         NSLog(@"%@ 数组大小:%tu, 游标%tu越界!", NSStringFromSelector(_cmd), self.count, index);
@@ -63,7 +63,7 @@
 
 - (void)kr_safeRemoveOBject:(id)object {
     if(object == nil) {
-#ifndef DEBUG
+#ifdef DEBUG
         NSAssert1(false, @"%@ 删除目标对象为空！", NSStringFromSelector(_cmd));
 #else
         NSLog(@"%@ 删除目标对象为空！", NSStringFromSelector(_cmd));
@@ -75,7 +75,7 @@
 
 - (void)kr_safeRemoveObjectsInArray:(NSArray *)array {
     if (array == nil) {
-#ifndef DEBUG
+#ifdef DEBUG
         NSAssert1(false, @"%@ 删除数组为空！", NSStringFromSelector(_cmd));
 #else
         NSLog(@"%@ 删除数组为空！", NSStringFromSelector(_cmd));
@@ -88,14 +88,14 @@
 
 - (void)kr_safeInsertObject:(id)object atIndex:(NSUInteger)index {
     if (object == nil) {
-#ifndef DEBUG
+#ifdef DEBUG
         NSAssert1(false, @"%@ 插入对象为空！",  NSStringFromSelector(_cmd));
 #else
         NSLog(@"%@ 插入对象为空！",  NSStringFromSelector(_cmd));
 #endif
     } else {
         if (self.count == 0 || index > self.count -1) {
-#ifndef DEBUG
+#ifdef DEBUG
             NSAssert3(false,  @"%@ 数组大小:%tu, 插入游标%tu越界!",  NSStringFromSelector(_cmd), self.count, index);
 #else
             NSLog(@"%@ 数组大小:%tu, 插入游标%tu越界!", NSStringFromSelector(_cmd), self.count, index);
@@ -109,14 +109,14 @@
 
 - (void)kr_safeReplaceObjectAtIdnex:(NSUInteger)index withObject:(id)object {
     if (object == nil) {
-#ifndef DEBUG
+#ifdef DEBUG
         NSAssert1(false, @"%@要替代对象为空！",  NSStringFromSelector(_cmd));
 #else
         NSLog( @"%@要替代对象为空！",  NSStringFromSelector(_cmd));
 #endif
     } else {
         if (self.count == 0 || index > self.count -1) {
-#ifndef DEBUG
+#ifdef DEBUG
             NSAssert3(false, @"%@ 数组大小:%tu, 替换目标游标%tu越界!", NSStringFromSelector(_cmd), self.count, index);
 #else
             NSLog(@"%@ 数组大小:%tu, 替换目标游标%tu越界!", NSStringFromSelector(_cmd), self.count, index);

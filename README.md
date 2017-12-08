@@ -33,3 +33,7 @@
 
 这样在真实发布的App中防止闪退，但在开发环境中并不会保护，便于发现问题。
 
+## NSMutableDictionary+KRSafe
+原理同上
+
+

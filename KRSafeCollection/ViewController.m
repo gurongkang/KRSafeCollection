@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "NSArray+KRSafe.h"
+#import "NSMutableDictionary+KRSafe.h"
 
 @interface ViewController ()
 
@@ -14,16 +16,19 @@
 
 @implementation ViewController
 
+#pragma mark life
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    [self testArray];
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)testArray {
+    NSArray *array = @[@"1", @"2"];
+    NSLog(@"%@", [array kr_safeObjectAtIndex:3]);
 }
+
 
 
 @end
