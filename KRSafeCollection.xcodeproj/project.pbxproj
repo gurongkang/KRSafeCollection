@@ -16,6 +16,7 @@
 		54B5B4771FDA77140098C10D /* KRSafeCollectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B5B4761FDA77140098C10D /* KRSafeCollectionTests.m */; };
 		54B5B4821FDA77140098C10D /* KRSafeCollectionUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B5B4811FDA77140098C10D /* KRSafeCollectionUITests.m */; };
 		54B5B4921FDA77D80098C10D /* NSArray+KRSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B5B4911FDA77D80098C10D /* NSArray+KRSafe.m */; };
+		54B5B4951FDA847B0098C10D /* NSMutableDictionary+KRSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B5B4941FDA847B0098C10D /* NSMutableDictionary+KRSafe.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		54B5B4831FDA77140098C10D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54B5B4901FDA77D80098C10D /* NSArray+KRSafe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+KRSafe.h"; sourceTree = "<group>"; };
 		54B5B4911FDA77D80098C10D /* NSArray+KRSafe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+KRSafe.m"; sourceTree = "<group>"; };
+		54B5B4931FDA847B0098C10D /* NSMutableDictionary+KRSafe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+KRSafe.h"; sourceTree = "<group>"; };
+		54B5B4941FDA847B0098C10D /* NSMutableDictionary+KRSafe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+KRSafe.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +144,8 @@
 			children = (
 				54B5B4901FDA77D80098C10D /* NSArray+KRSafe.h */,
 				54B5B4911FDA77D80098C10D /* NSArray+KRSafe.m */,
+				54B5B4931FDA847B0098C10D /* NSMutableDictionary+KRSafe.h */,
+				54B5B4941FDA847B0098C10D /* NSMutableDictionary+KRSafe.m */,
 			);
 			path = SalfeCollection;
 			sourceTree = "<group>";
@@ -282,6 +287,7 @@
 				54B5B46D1FDA77140098C10D /* main.m in Sources */,
 				54B5B4921FDA77D80098C10D /* NSArray+KRSafe.m in Sources */,
 				54B5B45F1FDA77130098C10D /* AppDelegate.m in Sources */,
+				54B5B4951FDA847B0098C10D /* NSMutableDictionary+KRSafe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
