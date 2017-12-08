@@ -23,7 +23,6 @@
 
 @interface NSMutableArray (KRSafe)
 
-
 /**
  末尾添加object，如果object为nil，操作忽略
 
